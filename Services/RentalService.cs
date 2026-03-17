@@ -1,4 +1,5 @@
 ﻿using APBD_TASK2.Database;
+using APBD_TASK2.Enum;
 using APBD_TASK2.Interfaces;
 using APBD_TASK2.Models;
 
@@ -20,7 +21,8 @@ public class RentalService : IRentalService
 
     public List<Equipment> GetAvailableEquipment()
     {
-        throw new NotImplementedException();
+        var db = Singleton.Instance;
+        return db.EquipmentList.Where(c => c.Status == EquipmentStatus.Available).ToList();
     }
 
     public List<Equipment> GetAllEquipment()
