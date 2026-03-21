@@ -22,7 +22,8 @@ namespace APBD_TASK2.Database
         private Singleton() { }
 
         //TODO: add collections for items in the exercise
-        public List<Equipment> EquipmentList { get; } = new List<Equipment>();
-        public List<User> UserList { get; } = new List<User>();
+        public List<Equipment> EquipmentList { get; } = new();
+        public List<User> UserList { get; } = new();
+        public List<Rental> RentalList { get; } = new();
     }
 }
